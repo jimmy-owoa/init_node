@@ -1,4 +1,3 @@
-<!-- Write readme file about a project that im learning about nodejs and express for github -->
 # Nodejs and Express
 ## Description
 This is a project that i'm learning about nodejs and express for github
