@@ -4,6 +4,13 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/init_database', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Conexión exitosa a la base de datos'))
+  .catch((error) => console.error('Error al conectar a la base de datos: ', error));
+
+
 // Set up static file serving
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));
