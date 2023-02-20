@@ -3,4 +3,8 @@ extends layout
 block content
   h2 Home
   p Welcome to Home
+  ul
+    each message in messages || []
+      li
+        a(href="/messages/" + message.id) #{message.title}
   a(href="/about") About

@@ -3,4 +3,15 @@ extends layout
 block content
   h2 New View
   p Welcome to About
+
+  form(method='POST' action='/messages')
+    label(for='title') Título:
+    input(type='text' id='title' name='title')
+    br
+    label(for='body') Mensaje:
+    textarea(id='body' name='body')
+    br
+    input(type='submit' value='Enviar')
+
+
   a(href="/") Home
